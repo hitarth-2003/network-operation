@@ -18,5 +18,3 @@ while True:
 ping_function()
 
 
-/
-#  vvdvdfdf

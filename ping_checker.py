@@ -17,5 +17,3 @@ while True:
 
 ping_function()
 
-
-nvnvnvnv

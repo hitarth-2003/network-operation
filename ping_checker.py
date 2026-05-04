@@ -1,0 +1,8 @@
+from ping3 import ping
+host=input("enter host: ")
+response=ping(host)
+
+if response is None:
+    print("host is low:")
+else:
+    print(f"response time : {response*1000:.2f} ms")

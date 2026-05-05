@@ -9,10 +9,43 @@ def ping_function():
         print(f"response time : {response*1000:.2f} ms")
 
 while True:
-    print("1. Ping")
-    print("2. Traceroute")
+    print("1. Ping\n")
+    print("2. Traceroute\n")
+    print("3. netstat\n")
+    print("4. ifconfig\n")
+    print("5. mtr\n")
+    print("6. nslookup\n")
+    print("7. telnet\n")
+    print("8. hostname\n")
+    print("9. ip\n")
+    print("10. 1wconfig\n")
     choice = input("Choose option: ")
+    
+    
+    match choice:
+        case '1':
+            ping_function()
+            break
+        case '2':
+            pass
+        case '3':
+            pass
+        case '4':
+            pass
+        case '5':
+            pass
+        case '6':
+            pass
+        case '7':
+            pass
+        case '8':
+            pass
+        case '9':
+            pass
+        case '10':
+            pass
+        case _:
+            print("defaul:")
 
 
 
-ping_function()

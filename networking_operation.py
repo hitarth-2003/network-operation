@@ -1,4 +1,5 @@
 from ping3 import ping
+import subprocess
 def ping_function():
     print("--------------------ping-------------------")
     host=input("enter host: ")
@@ -11,7 +12,11 @@ def ping_function():
 
 def traceroute():
     print("--------------traceroute---------------")
+    host=input("enter host:")
+    result= subprocess.run(["tracert", host], capture_output=True, text=True)
+    print(result.stdout)
 
+    
 def netstat():
     print("--------------netstat---------------")
     pass
@@ -65,7 +70,8 @@ while True:
             ping_function()
             break
         case '2':
-            pass
+            traceroute()
+            break
         case '3':
             pass
         case '4':

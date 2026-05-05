@@ -1,5 +1,6 @@
 from ping3 import ping
 def ping_function():
+    print("--------------------ping-------------------")
     host=input("enter host: ")
     response=ping(host)
 
@@ -7,6 +8,43 @@ def ping_function():
         print("host is low:")
     else:
         print(f"response time : {response*1000:.2f} ms")
+
+def traceroute():
+    print("--------------traceroute---------------")
+
+def netstat():
+    print("--------------netstat---------------")
+    pass
+
+def ifconfig():
+    print("--------------ifconfig---------------")
+    pass
+
+def mtr():
+    print("--------------mtr---------------")
+    pass
+
+def nslookup():
+    print("--------------nslookup---------------")
+    pass
+
+def telnet():
+    print("--------------telnet---------------")
+    pass
+
+def hostname():
+    print("--------------hostname---------------")
+    pass
+
+def ip():
+    print("--------------ip---------------")
+    pass
+
+def ipconfig():
+    print("--------------ipconfig---------------")
+    pass
+
+
 
 while True:
     print("1. Ping\n")
@@ -48,5 +86,3 @@ while True:
             print("defaul:")
 
 
-
-sjckjkckc

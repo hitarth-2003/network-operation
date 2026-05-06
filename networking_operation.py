@@ -23,14 +23,17 @@ def traceroute():
     
 
 
-def netstat():
+def netstat(host):
     print("--------------netstat---------------")
+
+    host=input("enter :")
     
-    connections = psutil.net_connections(kind='inet')
+    
+    host.connections = psutil.net_connections(kind='inet')
     
     print(f"{'Proto':<8} {'Local Address':<25} {'Remote Address':<25} {'Status':<15} {'PID'}")
     
-    for conn in connections:
+    for conn in host.connections:
         
         laddr = f"{conn.laddr.ip}:{conn.laddr.port}"
         raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else "-"
@@ -89,7 +92,8 @@ while True:
             traceroute()
             break
         case '3':
-            netstat()
+            if __name__ == "__main__":
+                netstat()
             break
         case '4':
             pass

@@ -25,7 +25,7 @@ def neystat():
     print(f"{'Proto':<8} {'Local Address':<25} {'Remote Address':<25} {'Status':<15} {'PID'}")
     
     for conn in connections:
-        # Format addresses from (ip, port) tuples to 'ip:port' strings
+        
         laddr = f"{conn.laddr.ip}:{conn.laddr.port}"
         raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else "-"
         

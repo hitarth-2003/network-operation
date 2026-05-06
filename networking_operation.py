@@ -89,7 +89,7 @@ while True:
             traceroute()
             break
         case '3':
-            pass
+            netstat()
         case '4':
             pass
         case '5':

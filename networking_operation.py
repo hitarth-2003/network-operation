@@ -40,6 +40,11 @@ def netstat():
         if proto != "all" and proto.upper() != protocol:
             continue
 
+        laddr = f"{conn.laddr.ip}:{conn.laddr.port}"
+        raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else "-"
+
+        print(f"{protocol:<8} {laddr:<25} {raddr:<25} {conn.status:<15} {conn.pid}")
+
 def ifconfig():
     print("--------------ifconfig---------------")
     pass

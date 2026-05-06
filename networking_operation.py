@@ -19,7 +19,13 @@ def traceroute():
     result= subprocess.run(["tracert", host], capture_output=True, text=True)
     print(result.stdout)
 
-def neystat():
+
+    
+
+
+def netstat():
+    print("--------------netstat---------------")
+    
     connections = psutil.net_connections(kind='inet')
     
     print(f"{'Proto':<8} {'Local Address':<25} {'Remote Address':<25} {'Status':<15} {'PID'}")
@@ -30,11 +36,6 @@ def neystat():
         raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else "-"
         
         print(f"{'TCP' if conn.type == 1 else 'UDP':<8} {laddr:<25} {raddr:<25} {conn.status:<15} {conn.pid}")
-
-
-def netstat():
-    print("--------------netstat---------------")
-    pass
 
 def ifconfig():
     print("--------------ifconfig---------------")

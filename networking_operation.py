@@ -1,5 +1,8 @@
 from ping3 import ping
 import subprocess
+import psutil
+
+
 def ping_function():
     print("--------------------ping-------------------")
     host=input("enter host: ")
@@ -16,7 +19,9 @@ def traceroute():
     result= subprocess.run(["tracert", host], capture_output=True, text=True)
     print(result.stdout)
 
-    
+def neystat():
+
+
 def netstat():
     print("--------------netstat---------------")
     pass

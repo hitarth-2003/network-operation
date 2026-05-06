@@ -23,22 +23,22 @@ def traceroute():
     
 
 
-def netstat(host):
+def netstat():
     print("--------------netstat---------------")
 
-    host=input("enter :")
+    proto = input("enter protocol (tcp/udp/all: )").lower()
     
     
-    host.connections = psutil.net_connections(kind='inet')
+    connections = psutil.net_connections(kind='inet')
     
     print(f"{'Proto':<8} {'Local Address':<25} {'Remote Address':<25} {'Status':<15} {'PID'}")
     
-    for conn in host.connections:
+    for conn in connections:
         
-        laddr = f"{conn.laddr.ip}:{conn.laddr.port}"
-        raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else "-"
+        protocol = "TCP" if conn.type == 1 else "UDP"
         
-        print(f"{'TCP' if conn.type == 1 else 'UDP':<8} {laddr:<25} {raddr:<25} {conn.status:<15} {conn.pid}")
+        if proto != "all" and proto.upper() != protocol:
+            continue
 
 def ifconfig():
     print("--------------ifconfig---------------")

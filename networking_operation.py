@@ -90,6 +90,7 @@ while True:
             break
         case '3':
             netstat()
+            break
         case '4':
             pass
         case '5':

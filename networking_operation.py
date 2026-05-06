@@ -20,6 +20,16 @@ def traceroute():
     print(result.stdout)
 
 def neystat():
+    connections = psutil.net_connections(kind='inet')
+    
+    print(f"{'Proto':<8} {'Local Address':<25} {'Remote Address':<25} {'Status':<15} {'PID'}")
+    
+    for conn in connections:
+        # Format addresses from (ip, port) tuples to 'ip:port' strings
+        laddr = f"{conn.laddr.ip}:{conn.laddr.port}"
+        raddr = f"{conn.raddr.ip}:{conn.raddr.port}" if conn.raddr else "-"
+        
+        print(f"{'TCP' if conn.type == 1 else 'UDP':<8} {laddr:<25} {raddr:<25} {conn.status:<15} {conn.pid}")
 
 
 def netstat():

@@ -118,3 +118,4 @@ while True:
             print("defaul:")
 
 
+vais

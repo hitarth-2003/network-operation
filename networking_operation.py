@@ -79,7 +79,7 @@ while True:
     print("1. Ping\n")
     print("2. Traceroute\n")
     print("3. netstat\n")
-    print("4. ifconfig\n")
+    print("4. ifconfig\n") 
     print("5. mtr\n")
     print("6. nslookup\n")
     print("7. telnet\n")

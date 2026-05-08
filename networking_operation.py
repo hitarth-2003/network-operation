@@ -118,4 +118,3 @@ while True:
             print("defaul:")
 
 
-hitart
